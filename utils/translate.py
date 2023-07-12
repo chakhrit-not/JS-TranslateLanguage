@@ -100,8 +100,8 @@ def _math_data(formats: Dict, locle_code: str) -> Dict:
 
         key = formats[x]
 
-        if key == '' or not key:
-            data[x] = ''
+        if key == '' or not key or key.isspace():
+            data[x] = key
         elif isinstance(key, dict):
             data[x] = _math_data(key, locle_code)
         elif isinstance(key, list):
