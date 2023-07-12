@@ -100,14 +100,14 @@ def _math_data(formats: Dict, locle_code: str) -> Dict:
 
         key = formats[x]
 
-        if isinstance(key, dict):
+        if key == '':
+            data[x] = ''
+        elif isinstance(key, dict):
             data[x] = _math_data(key, locle_code)
         elif isinstance(key, list):
             data[x] = _spend_list(key, locle_code)
         elif isinstance(key, str):
             data[x] = _googletrans(key, locle_code)
-        elif key == '':
-            data[x] = ''
         else:
             data[x] = key
 
