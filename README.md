@@ -1,4 +1,4 @@
-# JS-TranslateLanguage
+# แปลภาษา Json data
 
 ข้อมูล JSON ต้นฉบับ **th**  
 
